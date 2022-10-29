@@ -18,14 +18,14 @@ if ((userType == 'RESTRICTED')) {
 const accountInfo = object.accountInfo();
 
 
-if (accountInfo.numberOfFriends > 0 && (accountInfo.accountType == 'NORMAL' 
-|| accountInfo.accountType =='VIP'
-|| accountInfo.accountType =='RESTRICTED')) {
+if (accountInfo.numberOfFriends > 0 && (accountInfo.accountType == 'NORMAL'
+    || accountInfo.accountType == 'VIP'
+    || accountInfo.accountType == 'RESTRICTED')) {
     object.removeExistingFriend();
     console.log('NumberONLY added: ' + object.getAllFriends());
 } else if (accountInfo.numberOfFriends == 0 && (accountInfo.accountType == 'NORMAL'
-|| accountInfo.accountType =='VIP'
-|| accountInfo.accountType =='RESTRICTED')) {
+    || accountInfo.accountType == 'VIP'
+    || accountInfo.accountType == 'RESTRICTED')) {
     console.log('You have 0 friends in your account!')
 };
 

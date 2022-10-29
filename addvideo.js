@@ -22,7 +22,8 @@ if (accountInfo.numberOfVideos <= 49 && accountInfo.accountType == 'NORMAL') {
     object.addNewVideo();
     console.log(object.getAllVideos());
 } else if (accountInfo.numberOfVideos >= 50 && accountInfo.accountType == 'NORMAL') {
-    console.log('You have reached the limit of videos you can upload with normal account!')
+    console.log(`You have reached the limit of videos you can upload with normal account!
+    You have ${accountInfo.numberOfVideos} in your account!`)
 };
 // IF VIP
 if (accountInfo.accountType == 'VIP') {
@@ -32,6 +33,6 @@ if (accountInfo.accountType == 'VIP') {
 // --- 
 // IF RESTRICTED
 if (accountInfo.accountType == 'RESTRICTED') {
-    console.log('Restricted accounts cannot add Videos');
+    console.log('Restricted accounts cannot add Videos.');
 };
 //---

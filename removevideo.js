@@ -7,28 +7,28 @@ const restrictedObject = socialNetworkProcessor.initConfig(`${__dirname}/test_sc
 
 var userType = process.argv[2];
 
-if((userType == 'RESTRICTED')){
+if ((userType == 'RESTRICTED')) {
     object = restrictedObject
-    }  else if (userType == 'VIP')   { 
-     object = vipObject
-    } else {
-     object = normalObject
-    };
+} else if (userType == 'VIP') {
+    object = vipObject
+} else {
+    object = normalObject
+};
 
 
 //object.removeExistingVideo();
 //console.log(object.removeExistingVideo());
-    
+
 const accountInfo = object.accountInfo();
 
 
-if (accountInfo.numberOfVideos > 0 && (accountInfo.accountType == 'NORMAL' 
-|| accountInfo.accountType =='VIP'
-|| accountInfo.accountType =='RESTRICTED')) {
+if (accountInfo.numberOfVideos > 0 && (accountInfo.accountType == 'NORMAL'
+    || accountInfo.accountType == 'VIP'
+    || accountInfo.accountType == 'RESTRICTED')) {
     object.removeExistingVideo();
     console.log('NumberONLY added: ' + object.getAllVideos());
 } else if (accountInfo.numberOfVideos == 0 && (accountInfo.accountType == 'NORMAL'
-|| accountInfo.accountType =='VIP'
-|| accountInfo.accountType =='RESTRICTED')) {
+    || accountInfo.accountType == 'VIP'
+    || accountInfo.accountType == 'RESTRICTED')) {
     console.log('You have 0 videos in your account!')
 };
